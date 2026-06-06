@@ -7,7 +7,7 @@ export function getSupabaseBrowser() {
     client = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-      { db: { schema: "sheng_jisho" } }
+      { db: { schema: "sheng_jisho" as "public" } }
     );
   }
   return client;
