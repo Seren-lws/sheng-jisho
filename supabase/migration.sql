@@ -1,7 +1,15 @@
 -- 极简辞书：words 表
 -- 在 Supabase SQL Editor 中运行此脚本
 
-create table if not exists words (
+-- 创建独立 schema（与同项目其他应用隔离）
+create schema if not exists sheng_jisho;
+
+-- 允许 anon / authenticated 角色访问此 schema
+grant usage on schema sheng_jisho to anon, authenticated;
+alter default privileges in schema sheng_jisho
+  grant select, insert, update, delete on tables to anon, authenticated;
+
+create table if not exists sheng_jisho.words (
   id uuid default gen_random_uuid() primary key,
   original text not null unique,
   kana text not null default '',
@@ -25,6 +33,6 @@ create table if not exists words (
 );
 
 -- 索引
-create index if not exists idx_words_srs_due on words (srs_due);
-create index if not exists idx_words_srs_rank on words (srs_rank);
-create index if not exists idx_words_tags on words using gin (tags);
+create index if not exists idx_words_srs_due on sheng_jisho.words (srs_due);
+create index if not exists idx_words_srs_rank on sheng_jisho.words (srs_rank);
+create index if not exists idx_words_tags on sheng_jisho.words using gin (tags);
