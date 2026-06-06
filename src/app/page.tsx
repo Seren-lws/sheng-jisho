@@ -54,7 +54,7 @@ export default function SearchPage() {
   return (
     <div className="max-w-lg mx-auto px-4 pt-12 pb-24">
       <h1 className="text-2xl font-light text-slate-800 mb-8 tracking-wide">
-        極簡辭書
+        极简中日辞书
       </h1>
 
       <form onSubmit={handleSearch} className="relative mb-6">

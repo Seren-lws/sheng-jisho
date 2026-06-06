@@ -10,7 +10,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "極簡辭書",
+  title: "极简中日辞书",
   description: "极简 AI 日语词典 + 生词本",
   manifest: "/manifest.json",
 };
