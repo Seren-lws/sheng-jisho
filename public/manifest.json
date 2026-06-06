@@ -1,0 +1,21 @@
+{
+  "name": "極簡辭書",
+  "short_name": "辭書",
+  "description": "极简 AI 日语词典 + 生词本",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5F4",
+  "theme_color": "#F5F5F4",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
